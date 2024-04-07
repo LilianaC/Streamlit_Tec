@@ -6,6 +6,6 @@ df = pd.read_csv(url)
 
 listadulces = df['categoría'].unique().tolist()
 
-selecc = st.selectbox('Selecciona la lista', listadulces, ['Tamarindo'],help='Selecciona la categoría de dulces. Presiona Enviar 📤')
+selecc = st.selectbox('Selecciona la lista', listadulces)
 
 st.dataframe(df[df['categoría'] == selecc])
