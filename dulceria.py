@@ -23,7 +23,7 @@ compra["nombre"] = nombre
 producto = st.text_input('¿Qué vas a comprar? ')
 compra["producto"] = producto
 
-image = Image.open('str(prducto)+.png')
+image = Image.open('str(producto)+.png')
 st.image(image)
 
 cantidad = st.number_input('¿Cuántas piezas?',value=0)
