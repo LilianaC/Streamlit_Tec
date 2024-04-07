@@ -28,12 +28,11 @@ st.image(image)
 
 cantidad = st.number_input('¿Cuántas piezas?',value=0)
 compra["cantidad"] = cantidad
+dfc['pago'] = df.loc[df['producto'] == producto,'precio'] * dfc['cantidad']
 
 dfc.loc[0] = compra
 
 st.dataframe(dfc[['nombre','producto','cantidad']])
 
 st.title('Muchas gracias por la compra 🙏🏼')
-
-dfc['pago'] = df.loc[df['producto'] == producto,'precio'] * dfc['cantidad']
 st.dataframe(dfc)
