@@ -36,7 +36,8 @@ st.dataframe(dfc[['nombre','producto','cantidad']])
 
 #dfc['pago'] = df.loc[df['producto'] == producto,'precio'] * dfc['cantidad']
 
-dfc.iat[0,3] = df.loc[df['producto'] == producto,'precio'] * dfc['cantidad']
+pago = df.loc[df['producto'] == producto,'precio'] * dfc['cantidad']
+dfc.at[0,'pago'] = pago
 
 
 st.title('Muchas gracias por la compra 🙏🏼')
