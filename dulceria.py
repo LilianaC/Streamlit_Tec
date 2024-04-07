@@ -6,8 +6,6 @@ df = pd.read_csv(url)
 
 listadulces = df['categoría'].unique().tolist()
 
-selecc = st.multiselect('Selecciona la lista', listadulces, help='Selecciona la categoría de dulces. Presiona Enviar 📤')
-submitted = st.form_submit_button("Enviar 📤")
+selecc = st.multiselect('Selecciona la lista', listadulces, ['Dulces'],help='Selecciona la categoría de dulces. Presiona Enviar 📤')
 
-if submitted:
-    st.dataframe(df[df['categoría'] == selecc])
+st.dataframe(df[df['categoría'] == selecc])
