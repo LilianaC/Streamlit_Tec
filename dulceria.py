@@ -26,7 +26,8 @@ cantidad = st.number_input('¿Cuántas piezas?',value=0)
 compra["cantidad"] = cantidad
 
 dfc.loc[0] = compra
-st.dataframe(dfc)
+
+st.dataframe(dfc[['nombre','producto','cantidad']])
 
 st.title('Muchas gracias por la compra 🙏🏼')
 
