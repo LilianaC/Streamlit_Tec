@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+from PIL import Image
 
 url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQy_3VusOhQHehdbyBITYO3YkIeZ9agx3SDvkcCk0s02Yo9jqB_2c5wS2O7x5cdo1KXavy_tlqbNvHy/pub?gid=65918408&single=true&output=csv'
 df = pd.read_csv(url)
@@ -21,7 +22,9 @@ compra["nombre"] = nombre
 
 producto = st.text_input('¿Qué vas a comprar? ')
 compra["producto"] = producto
-st.image('str(prducto)+.png')
+
+image = Image.open('str(prducto)+.png')
+st.image(image)
 
 cantidad = st.number_input('¿Cuántas piezas?',value=0)
 compra["cantidad"] = cantidad
