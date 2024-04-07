@@ -22,7 +22,7 @@ compra["nombre"] = nombre
 
 producto = st.text_input('¿Qué vas a comprar? ')
 compra["producto"] = producto
-precio = df.loc[df['producto'] == producto,'precio']
+precio = df.loc[df['producto'] == producto,'precio'].values[0]
 
 image = Image.open(str(producto)+'.png')
 st.image(image)
@@ -34,11 +34,10 @@ compra["cantidad"] = cantidad
 dfc.loc[0] = compra
 
 st.dataframe(dfc[['nombre','producto','cantidad']])
+pago = precio * dfc['cantidad'].values[0]
 
-#dfc['pago'] = df.loc[df['producto'] == producto,'precio'] * dfc['cantidad']
+dfc['pago'] = pago
 
-pago = precio * dfc['cantidad']
-dfc.at[0,'pago'] = pago.values[0]
 
 
 st.title('Muchas gracias por la compra 🙏🏼')
