@@ -29,11 +29,14 @@ def compritas():
     #st.rerun()
     compra["producto"] = producto
 
-compritas()
-precio = df.loc[df['producto'] == producto,'precio'].values[0]
-image = Image.open(str(producto)+'.png')
-st.image(image)
 
+def resultados():
+    precio = df.loc[df['producto'] == producto,'precio'].values[0]
+    image = Image.open(str(producto)+'.png')
+    st.image(image)
+
+compritas()
+resultados()
 
 cantidad = st.number_input('¿Cuántas piezas?',value=0)
 compra["cantidad"] = cantidad
