@@ -4,19 +4,15 @@ from PIL import Image
 
 url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQy_3VusOhQHehdbyBITYO3YkIeZ9agx3SDvkcCk0s02Yo9jqB_2c5wS2O7x5cdo1KXavy_tlqbNvHy/pub?gid=65918408&single=true&output=csv'
 df = pd.read_csv(url)
-
-st.title('🍫Esta es la dulcería 🍬')
-
-listadulces = df['categoría'].unique().tolist()
-
-selecc = st.selectbox('Selecciona la lista', listadulces)
-
-st.dataframe(df[df['categoría'] == selecc])
-
 urlc = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQy_3VusOhQHehdbyBITYO3YkIeZ9agx3SDvkcCk0s02Yo9jqB_2c5wS2O7x5cdo1KXavy_tlqbNvHy/pub?gid=1699633182&single=true&output=csv'
 dfc = pd.read_csv(urlc)
 
-def compritas():
+
+with st.form("my_dulceria"):
+    st.title('🍫Esta es la dulcería 🍬')
+    listadulces = df['categoría'].unique().tolist()
+    selecc = st.selectbox('Selecciona la lista', listadulces)
+    st.dataframe(df[df['categoría'] == selecc])
     compra = {}
     nombre =  st.text_input('¿Cuál es tu nombre?')
     compra["nombre"] = nombre
@@ -28,15 +24,13 @@ def compritas():
         st.image(image)
     #st.rerun()
     compra["producto"] = producto
+    st.form_submit_button('Envia mis compras')
+    
 
 
-def resultados():
-    precio = df.loc[df['producto'] == producto,'precio'].values[0]
-    image = Image.open(str(producto)+'.png')
-    st.image(image)
-
-compritas()
-resultados()
+precio = df.loc[df['producto'] == producto,'precio'].values[0]
+image = Image.open(str(producto)+'.png')
+st.image(image)
 
 cantidad = st.number_input('¿Cuántas piezas?',value=0)
 compra["cantidad"] = cantidad
