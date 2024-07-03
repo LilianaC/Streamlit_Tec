@@ -27,14 +27,12 @@ compra["producto"] = producto
 if producto not in listadulces:
     image = Image.open('error-2129569_1280.jpg')
     st.image(image)
+    st.stop()
 else:
     precio = df.loc[df['producto'] == producto,'precio'].values[0]
     image = Image.open(str(producto)+'.png')
     st.image(image)
 
-
-if len(producto) == 0:
-    st.stop()
 
 cantidad = st.number_input('¿Cuántas piezas?',value=0)
 compra["cantidad"] = cantidad
@@ -46,8 +44,6 @@ st.dataframe(dfc[['nombre','producto','cantidad']])
 pago = precio * dfc['cantidad'].values[0]
 
 dfc['pago'] = pago
-
-
 
 st.title('Muchas gracias por la compra 🙏🏼')
 st.dataframe(dfc)
