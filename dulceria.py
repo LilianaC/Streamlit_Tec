@@ -16,19 +16,20 @@ st.dataframe(df[df['categoría'] == selecc])
 urlc = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQy_3VusOhQHehdbyBITYO3YkIeZ9agx3SDvkcCk0s02Yo9jqB_2c5wS2O7x5cdo1KXavy_tlqbNvHy/pub?gid=1699633182&single=true&output=csv'
 dfc = pd.read_csv(urlc)
 
-compra = {}
-nombre =  st.text_input('¿Cuál es tu nombre?')
-compra["nombre"] = nombre
-
-producto = st.text_input('¿Qué vas a comprar? ')
-
-if producto not in listadulces:
-    st.warning('Por favor introduce un producto que tengamos en existencia')
-    image = Image.open('error-2129569_1280.jpg')
-    st.image(image)
+def compritas():
+    compra = {}
+    nombre =  st.text_input('¿Cuál es tu nombre?')
+    compra["nombre"] = nombre
+    producto = st.text_input('¿Qué vas a comprar? ')
+    
+    if producto not in listadulces:
+        st.warning('Por favor introduce un producto que tengamos en existencia')
+        image = Image.open('error-2129569_1280.jpg')
+        st.image(image)
     #st.rerun()
+    compra["producto"] = producto
 
-compra["producto"] = producto
+compritas()
 precio = df.loc[df['producto'] == producto,'precio'].values[0]
 image = Image.open(str(producto)+'.png')
 st.image(image)
