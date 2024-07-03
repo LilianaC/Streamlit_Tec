@@ -22,6 +22,8 @@ compra["nombre"] = nombre
 
 producto = st.text_input('¿Qué vas a comprar? ')
 compra["producto"] = producto
+if len(producto) == 0:
+    st.stop()
 precio = df.loc[df['producto'] == producto,'precio'].values[0]
 
 image = Image.open(str(producto)+'.png')
