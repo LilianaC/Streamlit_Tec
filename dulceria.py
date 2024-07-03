@@ -23,8 +23,6 @@ compra["nombre"] = nombre
 producto = st.text_input('¿Qué vas a comprar? ')
 compra["producto"] = producto
 
-if len(producto) == 0:
-    st.stop()
 
 if producto not in listadulces:
     image = Image.open('error-2129569_1280.jpg')
@@ -33,6 +31,10 @@ else:
     precio = df.loc[df['producto'] == producto,'precio'].values[0]
     image = Image.open(str(producto)+'.png')
     st.image(image)
+
+
+if len(producto) == 0:
+    st.stop()
 
 cantidad = st.number_input('¿Cuántas piezas?',value=0)
 compra["cantidad"] = cantidad
