@@ -15,9 +15,9 @@ st.dataframe(df[df['categoría'] == selecc])
 with st.form("my_dulceria"):
 
     compra = {}
-    nombre =  st.text_input('¿Cuál es tu nombre?')
+    nombre =  st.text_input('¿Cuál es tu nombre?',value=':)')
     compra["nombre"] = nombre
-    producto = st.text_input('¿Qué vas a comprar? ')
+    producto = st.text_input('¿Qué vas a comprar? ',value=':)')
     
     if producto not in listadulces:
         st.warning('Por favor introduce un producto que tengamos en existencia')
@@ -25,6 +25,7 @@ with st.form("my_dulceria"):
         st.image(image)
     #st.rerun()
     compra["producto"] = producto
+    cantidad = st.number_input('¿Cuántas piezas?',value=0)
     st.form_submit_button('Envia mis compras')
     
 
@@ -33,7 +34,6 @@ precio = df.loc[df['producto'] == producto,'precio'].values[0]
 image = Image.open(str(producto)+'.png')
 st.image(image)
 
-cantidad = st.number_input('¿Cuántas piezas?',value=0)
 compra["cantidad"] = cantidad
 
 
