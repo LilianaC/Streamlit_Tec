@@ -21,15 +21,14 @@ nombre =  st.text_input('¿Cuál es tu nombre?')
 compra["nombre"] = nombre
 
 producto = st.text_input('¿Qué vas a comprar? ')
-compra["producto"] = producto
-
 
 while producto not in listadulces:
     image = Image.open('error-2129569_1280.jpg')
     st.image(image)
     st.stop()
     producto = st.text_input('¿Qué vas a comprar? ')
-    
+
+compra["producto"] = producto
 precio = df.loc[df['producto'] == producto,'precio'].values[0]
 image = Image.open(str(producto)+'.png')
 st.image(image)
