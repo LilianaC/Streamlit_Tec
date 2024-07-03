@@ -22,11 +22,11 @@ compra["nombre"] = nombre
 
 producto = st.text_input('¿Qué vas a comprar? ')
 
-while producto not in listadulces:
+if producto not in listadulces:
+    st.warning('Por favor introduce un producto que tengamos en existencia')
     image = Image.open('error-2129569_1280.jpg')
     st.image(image)
     st.stop()
-    producto = st.text_input('¿Qué vas a comprar? ')
 
 compra["producto"] = producto
 precio = df.loc[df['producto'] == producto,'precio'].values[0]
