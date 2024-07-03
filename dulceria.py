@@ -29,7 +29,7 @@ if len(producto) == 0:
 if producto not in listadulces:
     image = Image.open('error-2129569_1280.jpg')
     st.image(image)
-elif:
+else:
     precio = df.loc[df['producto'] == producto,'precio'].values[0]
     image = Image.open(str(producto)+'.png')
     st.image(image)
