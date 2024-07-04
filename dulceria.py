@@ -28,7 +28,7 @@ if enviar:
         st.warning('Por favor introduce un producto que tengamos en existencia')
         image = Image.open('error-2129569_1280.jpg')
         st.image(image)
-        #st.rerun()
+        st.stop()
         
     compra["nombre"] = nombre
     compra["producto"] = producto
