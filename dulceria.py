@@ -8,8 +8,9 @@ urlc = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQy_3VusOhQHehdbyBITYO3Y
 dfc = pd.read_csv(urlc)
 
 st.title('🍫Esta es la dulcería 🍬')
+categorias = df['categoría'].unique().tolist()
 listadulces = df['producto'].unique().tolist()
-selecc = st.selectbox('Selecciona la categoría', listadulces)
+selecc = st.selectbox('Selecciona la categoría', categorias)
 st.dataframe(df[df['categoría'] == selecc])
 
 with st.form("my_dulceria"):
