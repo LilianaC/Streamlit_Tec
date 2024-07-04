@@ -22,13 +22,13 @@ with st.form("my_dulceria"):
     
 
 if enviar:
-
-   if producto not in listadulces:
-       st.warning('Por favor introduce un producto que tengamos en existencia')
-       image = Image.open('error-2129569_1280.jpg')
-       st.image(image)
-       st.rerun()
-
+    
+    if producto not in listadulces:
+        st.warning('Por favor introduce un producto que tengamos en existencia')
+        image = Image.open('error-2129569_1280.jpg')
+        st.image(image)
+        st.rerun()
+        
     compra["nombre"] = nombre
     compra["producto"] = producto
     precio = df.loc[df['producto'] == producto,'precio'].values[0]
