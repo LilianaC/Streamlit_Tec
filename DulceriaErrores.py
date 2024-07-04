@@ -17,7 +17,7 @@ compra = {}
 nombre =  st.text_input('¿Cuál es tu nombre?',value=':)')
 producto = st.text_input('¿Qué vas a comprar? ',value=':)')    
 cantidad = st.number_input('¿Cuántas piezas?',value=0)
-enviar = st.form_submit_button('¡Hacer pedido!')
+#enviar = st.form_submit_button('¡Hacer pedido!')
     
 
 if enviar:
