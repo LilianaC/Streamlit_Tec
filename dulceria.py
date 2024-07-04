@@ -16,20 +16,21 @@ with st.form("my_dulceria"):
 
     compra = {}
     nombre =  st.text_input('¿Cuál es tu nombre?',value=':)')
-    compra["nombre"] = nombre
-    producto = st.text_input('¿Qué vas a comprar? ',value=':)')
-    
-    if producto not in listadulces:
-        st.warning('Por favor introduce un producto que tengamos en existencia')
-        image = Image.open('error-2129569_1280.jpg')
-        st.image(image)
-    #st.rerun()
-    compra["producto"] = producto
+    producto = st.text_input('¿Qué vas a comprar? ',value=':)')    
     cantidad = st.number_input('¿Cuántas piezas?',value=0)
     enviar = st.form_submit_button('Envia mis compras')
     
 
 if enviar:
+
+   if producto not in listadulces:
+       st.warning('Por favor introduce un producto que tengamos en existencia')
+       image = Image.open('error-2129569_1280.jpg')
+       st.image(image)
+       st.rerun()
+
+    compra["nombre"] = nombre
+    compra["producto"] = producto
     precio = df.loc[df['producto'] == producto,'precio'].values[0]
     image = Image.open(str(producto)+'.png')
     st.image(image)
@@ -37,8 +38,7 @@ if enviar:
     dfc.loc[0] = compra
     st.dataframe(dfc[['nombre','producto','cantidad']])
     pago = precio * dfc['cantidad'].values[0]
-
-dfc['pago'] = pago
+    dfc['pago'] = pago
 
 st.title('Muchas gracias por la compra 🙏🏼')
 st.dataframe(dfc)
