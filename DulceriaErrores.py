@@ -13,13 +13,11 @@ listadulces = df['producto'].unique().tolist()
 selecc = st.selectbox('Selecciona la categoría', categorias)
 st.dataframe(df[df['categoría'] == selecc])
 
-with st.form("my_dulceria"):
-
-    compra = {}
-    nombre =  st.text_input('¿Cuál es tu nombre?',value=':)')
-    producto = st.text_input('¿Qué vas a comprar? ',value=':)')    
-    cantidad = st.number_input('¿Cuántas piezas?',value=0)
-    enviar = st.form_submit_button('¡Hacer pedido!')
+compra = {}
+nombre =  st.text_input('¿Cuál es tu nombre?',value=':)')
+producto = st.text_input('¿Qué vas a comprar? ',value=':)')    
+cantidad = st.number_input('¿Cuántas piezas?',value=0)
+enviar = st.form_submit_button('¡Hacer pedido!')
     
 
 if enviar:
