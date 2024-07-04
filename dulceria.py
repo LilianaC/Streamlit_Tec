@@ -1,4 +1,4 @@
-import pandas as pd
+iimport pandas as pd
 import streamlit as st
 from PIL import Image
 
@@ -26,21 +26,17 @@ with st.form("my_dulceria"):
     #st.rerun()
     compra["producto"] = producto
     cantidad = st.number_input('¿Cuántas piezas?',value=0)
-    st.form_submit_button('Envia mis compras')
+    enviar = st.form_submit_button('Envia mis compras')
     
 
-
-precio = df.loc[df['producto'] == producto,'precio'].values[0]
-image = Image.open(str(producto)+'.png')
-st.image(image)
-
-compra["cantidad"] = cantidad
-
-
-dfc.loc[0] = compra
-
-st.dataframe(dfc[['nombre','producto','cantidad']])
-pago = precio * dfc['cantidad'].values[0]
+if enviar:
+    precio = df.loc[df['producto'] == producto,'precio'].values[0]
+    image = Image.open(str(producto)+'.png')
+    st.image(image)
+    compra["cantidad"] = cantidad
+    dfc.loc[0] = compra
+    st.dataframe(dfc[['nombre','producto','cantidad']])
+    pago = precio * dfc['cantidad'].values[0]
 
 dfc['pago'] = pago
 
