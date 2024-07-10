@@ -6,5 +6,6 @@ df = pd.read_csv(url)
 
 
 st.title('🍬 La dulcería: Editable ✍🏻')
+st.dataframe(df, use_container_width=False)
 edited_df = st.data_editor(df)
 
