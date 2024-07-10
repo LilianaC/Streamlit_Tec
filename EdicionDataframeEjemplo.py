@@ -6,5 +6,5 @@ df = pd.read_csv(url)
 
 
 st.title('🍬 La dulcería: Editable ✍🏻')
-edited_df = st.data_editor(df)
-
+edf = st.data_editor(df)
+edf['Total a pagar']=edf['¿Cuántos compras?']*['Precio']
