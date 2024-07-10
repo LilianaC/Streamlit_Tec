@@ -9,3 +9,6 @@ df=pd.read_csv(url,encoding='ISO-8859-1')
 st.title('🎙️ Dataframe de Spotify 🎼')
 st.dataframe(df, use_container_width=False)
 
+
+
+
