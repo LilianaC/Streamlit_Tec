@@ -7,5 +7,5 @@ url='https://docs.google.com/spreadsheets/d/e/2PACX-1vSp88guAuK5q0hg3cp6clhOQwtQ
 df=pd.read_csv(url,encoding='ISO-8859-1')
 
 st.title('🎙️ Dataframe de Spotify 🎼')
-st.dataframe(df, use_container_width=True)
+st.dataframe(df, use_container_width=False)
 
