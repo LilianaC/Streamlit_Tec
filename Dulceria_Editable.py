@@ -9,7 +9,7 @@ st.title('🍬 La dulcería: Editable ✍🏻')
 
 edf = st.data_editor(df,
                     column_config={
-                      "Producto": "Nuestros productos"
+                      "Producto": "Nuestros productos",
                       "Fotografía": st.column_config.ImageColumn("Imagen")   
                     }
                     )
