@@ -7,7 +7,7 @@ df = pd.read_csv(url)
 
 st.title('🍬 La dulcería: Editable ✍🏻')
 
-edf = st.data_editor(df
+edf = st.data_editor(df,
                     column_config={
                       "Producto": "Nuestros productos"
                       "Fotografía": st.column_config.ImageColumn("Imagen")   
