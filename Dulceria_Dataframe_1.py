@@ -6,4 +6,18 @@ df = pd.read_csv(url)
 
 
 st.title('🍬 La dulcería: El dataframe ✍🏻')
-st.dataframe(df, use_container_width=True)
+#st.dataframe(df, use_container_width=True)
+
+#Modificar el ancho y alto del dataframe
+#Esconder el índice del dataframe
+
+st.dataframe(df, 
+             width=100, height=150, use_container_width=True.
+             hide_index=False,
+             column_order=['producto','precio','categoría']
+            )
+
+#Utilizar  column_config={
+                   #   "Producto": "Nuestros productos",
+                   #   "Fotografía": st.column_config.ImageColumn("Imagen")   
+                   # }
