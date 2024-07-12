@@ -10,12 +10,13 @@ st.title('🍬 La dulcería: El dataframe ✍🏻')
 st.dataframe(df.style.highlight_max(subset=['cantidad']), 
              width=150, height=420,
              hide_index=True,
-             "precio": st.column_config.NumberColumn(format="$%.2f"), 
+             
              column_order=['producto','Fotografía','precio','categoría','cantidad'],
              column_config={
                       "cantidad": "Inventario",
                       "producto": "Nuestros productos",
-                      "Fotografía": st.column_config.ImageColumn("Imagen")     
+                      "Fotografía": st.column_config.ImageColumn("Imagen"),
+                      "precio": st.column_config.NumberColumn(format="$%.2f"),
                     }
                           
             )
