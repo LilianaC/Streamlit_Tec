@@ -12,7 +12,7 @@ st.title('🍬 La dulcería: El dataframe ✍🏻')
 #Esconder el índice del dataframe
 
 st.dataframe(df, 
-             width=100, height=150, use_container_width=True,
+             width=100, height=350, use_container_width=True,
              hide_index=False,
              column_order=['producto','precio','categoría']
             )
