@@ -8,7 +8,7 @@ df = pd.read_csv(url)
 st.title('🍬 La dulcería: El dataframe ✍🏻')
 
 st.dataframe(df,
-             df.style.highlight_max(subset=['cantidad']), 
+             
              width=150, height=420,
              hide_index=True,use_container_width=True,
              
