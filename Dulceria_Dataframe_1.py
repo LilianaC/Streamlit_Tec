@@ -15,7 +15,8 @@ st.dataframe(df,
                       "Producto": "Nuestros productos",
                       "Fotografía": st.column_config.ImageColumn("Imagen"),
                       "precio": st.column_config.NumberColumn("Costo", format="$ %.2f")
-                    }
+                    },
+             df.style.highlight_max(axis=0)
              
             )
 
