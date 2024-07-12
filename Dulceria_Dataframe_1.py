@@ -7,7 +7,8 @@ df = pd.read_csv(url)
 
 st.title('🍬 La dulcería: El dataframe ✍🏻')
 
-st.dataframe(df.style.highlight_max(subset=['cantidad']), 
+st.dataframe(df,
+             df.style.highlight_max(subset=['cantidad']), 
              width=150, height=420,
              hide_index=True,use_container_width=True,
              
@@ -16,7 +17,7 @@ st.dataframe(df.style.highlight_max(subset=['cantidad']),
                       "cantidad": "Inventario",
                       "producto": "Nuestros productos",
                       "Fotografía": st.column_config.ImageColumn("Imagen"),
-                      "precio": st.column_config.NumberColumn("Precio",format= "$%.2f",)
+                      "precio": st.column_config.NumberColumn("Precio",format= "$%.2f")
                     }
                           
             )
