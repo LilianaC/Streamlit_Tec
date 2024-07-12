@@ -9,7 +9,7 @@ st.title('🍬 La dulcería: El dataframe ✍🏻')
 
 st.dataframe(df.style.highlight_max(subset=['cantidad']), 
              width=150, height=420,
-             hide_index=True,
+             hide_index=True,use_container_width=True,
              
              column_order=['producto','Fotografía','precio','categoría','cantidad'],
              column_config={
