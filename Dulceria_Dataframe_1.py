@@ -7,8 +7,7 @@ df = pd.read_csv(url)
 
 st.title('🍬 La dulcería: El dataframe ✍🏻')
 
-st.dataframe(df,
-             df['precio'].style.highlight_max(axis=0), 
+st.dataframe(df.style.highlight_max(df['precio']), 
              width=150, height=420, use_container_width=True,
              hide_index=True,
              column_order=['producto','Fotografía','precio','categoría'],
