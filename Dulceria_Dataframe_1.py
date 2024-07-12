@@ -12,9 +12,10 @@ st.dataframe(df.style.highlight_max(subset=['cantidad']),
              hide_index=True,
              column_order=['producto','Fotografía','precio','categoría','cantidad'],
              column_config={
+                      "cantidad": "Inventario",
                       "Producto": "Nuestros productos",
                       "Fotografía": st.column_config.ImageColumn("Imagen"),
-                      "precio": st.column_config.NumberColumn("Costo", format="$ %.2f")
+                      "precio": st.column_config.NumberColumn("Costo", format="$%.2f")
                     }
              
             )
