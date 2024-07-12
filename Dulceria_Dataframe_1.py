@@ -8,7 +8,7 @@ df = pd.read_csv(url)
 st.title('🍬 La dulcería: El dataframe ✍🏻')
 
 st.dataframe(df, 
-             width=150, height=500, use_container_width=True,
+             width=150, height=400, use_container_width=True,
              hide_index=True,
              column_order=['producto','Fotografía','precio','categoría'],
              column_config={
