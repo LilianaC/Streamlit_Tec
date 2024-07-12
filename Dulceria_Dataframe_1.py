@@ -13,7 +13,7 @@ st.title('🍬 La dulcería: El dataframe ✍🏻')
 
 st.dataframe(df, 
              width=100, height=350, use_container_width=True,
-             hide_index=False,
+             hide_index=True,
              column_order=['producto','precio','categoría']
             )
 
