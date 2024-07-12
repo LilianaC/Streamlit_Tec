@@ -10,15 +10,25 @@ df = pd.read_csv(url)
 st.title('🍬 La dulcería: El dataframe ✍🏻')
 
 
-#Modificar el ancho y alto del dataframe
-#Esconder el índice del dataframe
-#Modificar el orden de las columnas
-
+#Utilizar las configuración de las columnas:
+#Cambiar el título de las columnas
+#Mostrar las imágenes
+#Valor entero %d
+#Agregar el símbolo de pesos y dos valores decimales
 
 st.dataframe(df,
-             width=100, height=350, use_container_width=True,
-             hide_index=True,
-             column_order=['producto','precio','categoría']
+
+             width=150, height=420,
+             hide_index=True,use_container_width=True,
+
+             column_order=['producto','Fotografía','precio','categoría','cantidad'],
+             column_config={
+                      "cantidad": "Inventario",
+                      "producto": "Nuestros productos",
+                      "Fotografía": st.column_config.ImageColumn("Imagen"),
+                      "precio": st.column_config.NumberColumn("Precio",format= "$%.2f")
+                    }
+
             )
 
 
