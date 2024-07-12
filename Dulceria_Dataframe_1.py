@@ -16,7 +16,7 @@ st.dataframe(df.style.highlight_max(subset=['cantidad']),
                       "cantidad": "Inventario",
                       "producto": "Nuestros productos",
                       "Fotografía": st.column_config.ImageColumn("Imagen"),
-                      "precio": st.column_config.NumberColumn("Precio",format="$ %.2f"),
+                      "precio": st.column_config.NumberColumn("Precio",format= "$%.2f",)
                     }
                           
             )
