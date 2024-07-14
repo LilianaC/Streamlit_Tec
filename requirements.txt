@@ -6,3 +6,4 @@ plotly==5.9.0
 pillow==9.3.0
 datetime==5.1
 numpy==1.26.4
+utils == 1.0.2
