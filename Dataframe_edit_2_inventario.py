@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-from utils import icon
 
 
 data = {
@@ -40,7 +39,7 @@ data = {
 df = pd.DataFrame(data)
 
 st.title('🧮 El inventario ✍🏻')
-icon("🧮")
+
 
 with st.echo("below"):
     st.data_editor(
