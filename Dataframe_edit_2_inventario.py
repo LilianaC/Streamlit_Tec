@@ -38,7 +38,7 @@ data = {
               "http://hill.com/",
               "http://green.info/",
               "https://www.rose-freeman.net/",
-              "https://thompson.com/"]
+              "https://thompson.com/"],
 
      "Avance": [0.97, 0.71, 0.89, 0.34, 0.79],
 
