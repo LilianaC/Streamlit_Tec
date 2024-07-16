@@ -1,6 +1,7 @@
+#No olvidar el archivo requirements.txt
+
 import streamlit as st
 import pandas as pd
-from datetime import date
 
 data = {
     "id": ["P-1001", "P-1002", "P-1003", "P-1004", "P-1005"],
