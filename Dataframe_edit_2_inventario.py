@@ -84,7 +84,7 @@ st.data_editor(
             "stock": st.column_config.NumberColumn("Stock quantity", min_value=0),
             "reorder": st.column_config.NumberColumn("Reorder level", min_value=0),
             "history": st.column_config.LineChartColumn("Stock history"),
-            "last_updated": "Last updated",
+            "last_updated": "Actualización",
             "Links": st.column_config.LinkColumn(
             "Páginas", help="Una página random"
             ),
@@ -96,11 +96,14 @@ st.data_editor(
             y_max=1,
             ),
             "Avance": st.column_config.ProgressColumn(
-            "Status", min_value=0, max_value=1, format="%.2f"
+            "Status", min_value=0, max_value=1, format="%.2f",
+            "last_updated": st.column_config.DateColumn("Actualización",
+            help="Última actualización en el inventario",
+            min_value=date(2024, 7, 1)
         ),
 
             
         },
-        disabled=("id", "name", "image", "last_updated"),
+        disabled=("id", "image", "name"),
         hide_index=True)
 
