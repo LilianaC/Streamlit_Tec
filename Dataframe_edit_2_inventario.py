@@ -40,9 +40,7 @@ df = pd.DataFrame(data)
 
 st.title('🧮 El inventario ✍🏻')
 
-
-with st.echo("below"):
-    st.data_editor(
+st.data_editor(
         data,
         column_config={
             "id": "Product ID",
@@ -54,5 +52,5 @@ with st.echo("below"):
             "last_updated": "Last updated",
         },
         disabled=("id", "name", "image", "last_updated"),
-        hide_index=True,
-    )
+        hide_index=True)
+
