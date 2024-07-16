@@ -71,7 +71,17 @@ st.data_editor(
             "last_updated": "Last updated",
             "Links": st.column_config.LinkColumn(
             "Páginas", help="Una página random"
-        )
+            ),
+            "Actividad": st.column_config.BarChartColumn(
+            "Actividad diaria",
+            help="Actividad de los últimos 20 días",
+            width="medium",
+            y_min=0,
+            y_max=1,
+            ),
+            "Avance": st.column_config.ProgressColumn(
+            "Status", min_value=0, max_value=1, format="%.2f"
+        ),
         },
         disabled=("id", "name", "image", "last_updated"),
         hide_index=True)
