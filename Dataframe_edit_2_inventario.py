@@ -42,7 +42,7 @@ st.title('🧮 El inventario ✍🏻')
 
 st.data_editor(
         data,
-        width=1300, height=200,
+        width=1500, height=200,
         column_config={
             "id": "Product ID",
             "name": "Product Name",
