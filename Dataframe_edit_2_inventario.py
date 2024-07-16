@@ -99,12 +99,7 @@ st.data_editor(
             ),
             "Avance": st.column_config.ProgressColumn(
             "Status", min_value=0, max_value=1, format="%.2f"),
-            
-            "last_updated": st.column_config.DateColumn("Actualización",
-            help="Última actualización en el inventario",
-            min_value=date(2023, 2, 1)),
-
-            
+                       
         },
         disabled=("id", "image", "name"),
         hide_index=True)
