@@ -77,7 +77,10 @@ st.title('El inventario ✍🏻')
 st.data_editor(
         data,
         width=1700, height=250,
-        
+        column_order=["name","image","history","Avance","Actividad","Links","id","stock","reorder","last_updated"],
+        disabled=("id", "image", "name"),
+        hide_index=True,
+    
         column_config={
             "id": "Product ID",
             "name": "Product Name",
@@ -98,10 +101,7 @@ st.data_editor(
             y_max=1,
             ),
             "Avance": st.column_config.ProgressColumn(
-            "Status", min_value=0, max_value=1, format="%.2f"),
-                       
-        },
-        column_order=["name","image","history","Avance","Actividad","Links","id","stock","reorder","last_updated"],
-        disabled=("id", "image", "name"),
-        hide_index=True)
+            "Status", min_value=0, max_value=1, format="%.2f")              
+        }
+        )
 
