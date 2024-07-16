@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+from datetime import date
+
 
 
 data = {
@@ -100,7 +102,7 @@ st.data_editor(
             
             "last_updated": st.column_config.DateColumn("Actualización",
             help="Última actualización en el inventario",
-            min_value=date(2024, 7, 1)),
+            min_value=date(2023, 2, 1)),
 
             
         },
