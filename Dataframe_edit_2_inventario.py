@@ -48,14 +48,9 @@ data = {
      [76, 16, 64, 40, 13, 31, 36, 46, 17, 11, 82, 4, 54, 73, 32, 60, 50, 35, 83, 36, 60, 34, 10, 62, 63],
      [55, 34, 27, 9, 52, 38, 19, 83, 64, 61, 37, 88, 35, 35, 11, 85, 4, 70, 76, 84, 49, 46, 16, 45, 13],
      [38, 30, 5, 43, 18, 46, 31, 11, 23, 60, 67, 81, 32, 28, 15, 31, 9, 76, 31, 8, 38, 22, 16, 86, 82]
-     ],
+     ]
 
 
-    "Correos" : ["tamaramorrison@hotmail.com",
-                "woodtina@gmail.com",
-                "rogersbrandon@yahoo.com",
-                "davidbanks@yahoo.com",
-                "samanthasim yahoo.com"]
     
 }
 
@@ -88,11 +83,7 @@ st.data_editor(
             "Avance": st.column_config.ProgressColumn(
             "Status", min_value=0, max_value=1, format="%.2f"
         ),
-            "Correos": st.column_config.TextColumn(
-            "Email",
-            help="Correo electrónico de usuarios",
-            validate="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$",
-        ),
+
             
         },
         disabled=("id", "name", "image", "last_updated"),
