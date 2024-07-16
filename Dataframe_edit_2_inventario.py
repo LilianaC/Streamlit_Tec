@@ -84,7 +84,8 @@ st.data_editor(
             "image": st.column_config.ImageColumn("Image"),
             "stock": st.column_config.NumberColumn("Stock quantity", min_value=0),
             "reorder": st.column_config.NumberColumn("Reorder level", min_value=0),
-            "history": st.column_config.LineChartColumn("Stock history"),
+           # "history": st.column_config.LineChartColumn("Stock history"),
+            "history": st.column_config.AreaChartColumn("Stock history",width="medium"),
             "last_updated": "Actualización",
             "Links": st.column_config.LinkColumn(
             "Páginas", help="Una página random"
