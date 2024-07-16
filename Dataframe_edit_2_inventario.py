@@ -69,8 +69,9 @@ def icon(emoji: str):
 st.set_page_config(
     layout="centered", page_title="Column config demo app", page_icon="🧮"
 )
-st.title('🧮 El inventario ✍🏻')
 icon("🧮")
+st.title('El inventario ✍🏻')
+
 
 st.data_editor(
         data,
