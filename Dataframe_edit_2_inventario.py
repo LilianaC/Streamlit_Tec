@@ -101,6 +101,7 @@ st.data_editor(
             "Status", min_value=0, max_value=1, format="%.2f"),
                        
         },
+        column_order=["name","image","history","Avance","Actividad","Links","id","stock","reorder","last_updated"]
         disabled=("id", "image", "name"),
         hide_index=True)
 
