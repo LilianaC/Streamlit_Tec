@@ -96,11 +96,11 @@ st.data_editor(
             y_max=1,
             ),
             "Avance": st.column_config.ProgressColumn(
-            "Status", min_value=0, max_value=1, format="%.2f",
+            "Status", min_value=0, max_value=1, format="%.2f"),
+            
             "last_updated": st.column_config.DateColumn("Actualización",
             help="Última actualización en el inventario",
-            min_value=date(2024, 7, 1)
-        ),
+            min_value=date(2024, 7, 1)),
 
             
         },
