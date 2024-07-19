@@ -24,7 +24,7 @@ def kgf_kg():
 
 "st.session_state object:",st.session_state
 
-col1, buff, col2 = st.beta_columns([2,1,2])
+col1, buff, col2 = st.columns([2,1,2])
 
 with col1:
   kilos = st.number_input("kilos:",key="kgs",
