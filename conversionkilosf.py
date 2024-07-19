@@ -13,13 +13,13 @@ st.set_page_config(
 icon("🖩")
 st.title('Ejemplos de Session state (Estado de las sesiones)')
 
-count = 0
+contador = 0
 
-increment = st.button('Increment')
-if increment:
-    count += 1
+incremento = st.button('Incremento 🔼')
+if incremento:
+    contador += 1
 
-st.write('Count = ', count)
+st.write('Contador = ', contador)
 
 
 
