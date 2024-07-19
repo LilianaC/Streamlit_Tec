@@ -13,6 +13,15 @@ st.set_page_config(
 icon("🖩")
 st.title('Convertidor de kg a kg-fuerza 🖩')
 
+count = 0
+
+increment = st.button('Increment')
+if increment:
+    count += 1
+
+st.write('Count = ', count)
+
+
 
 def kgs_kgf():
   st.session_state.kgsf = st.session_state.kgs * 9.80665
@@ -33,3 +42,4 @@ with col1:
 with col2:
   fuerza = st.number_input("kilos fuerza:",key="kgsf",
                            on_change = kgf_kg)
+
