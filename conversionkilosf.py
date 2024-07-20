@@ -30,10 +30,10 @@ if "counter" not in st.session_state:
 def increment():
     st.session_state.counter += 1
 
-st.write("Counter:", st.session_state.counter)
+st.write("Contador:", st.session_state.counter)
 st.button("Más uno ➕", on_click=increment)
 
-if st.session_state.counter >= 5:
-    st.success("King of counting there! Your trophy for reaching 50: 🏆")
-elif st.session_state.counter >= 7:
-    st.warning("You made it to 10! Keep going to win a prize 🎈")
+if st.session_state.counter <= 5:
+    st.success("Sigue adelante con la cuenta 🎈")
+elif st.session_state.counter > 5:
+    st.warning("¡Ya alcanzaste la cuenta necesaria para el 🏆 ", st.session_state.counter)
