@@ -42,9 +42,12 @@ elif st.session_state.counter > 5:
 
 def limpiar_cache():
     keys = list(st.session_state.keys())
-    for key in keys:
-        st.session_state.pop(key)
+    #for key in keys:
+        #st.session_state.pop(key)
 
-#st.button("Borrar 🧹", on_click= limpiar_cache)
-st.button("Borrar 🧹", on_click= del st.session_state.counter)
+    for key in st.session_state.keys():
+        del st.session_state[key]
+
+st.button("Borrar 🧹", on_click= limpiar_cache)
+#st.button("Borrar 🧹", on_click= del st.session_state.counter)
 
