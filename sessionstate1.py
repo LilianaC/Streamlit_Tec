@@ -46,5 +46,3 @@ def limpiar_cache():
         st.session_state.pop(key)
 
 st.button("Borrar 🧹", on_click= limpiar_cache)
-
-st.markdown(''':blue[Ahora una prueba para enviar información fuera de un formulario]''')
