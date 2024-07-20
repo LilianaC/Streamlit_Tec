@@ -13,8 +13,9 @@ st.set_page_config(
 icon("🖩")
 st.title('Ejemplos de Session state (Estado de las sesiones)')
 
+st.markdown("""---""")
+st.subheader('_Streamlit_ is :blue[cool] :sunglasses:')
 contador = 0
-
 incremento = st.button('Incremento 🔼')
 if incremento:
     contador += 1
