@@ -23,3 +23,19 @@ if incremento:
 
 st.write('Contador = ', contador)
 
+st.markdown(''':green[El botón funciona todas las veces]''')
+
+if "counter" not in st.session_state:
+    st.session_state.counter = 0
+
+def increment():
+    st.session_state.counter += 1
+
+st.write("Contador:", st.session_state.counter)
+st.button("Más uno ➕", on_click=increment)
+
+if st.session_state.counter <= 5:
+    st.success("Sigue adelante con la cuenta 🎈")
+elif st.session_state.counter > 5:
+    st.success("¡Ya alcanzaste la cuenta necesaria para el 🏆 " + str(st.session_state.counter))
+    st.balloons()
