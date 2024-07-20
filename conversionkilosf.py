@@ -24,12 +24,7 @@ st.write('Contador = ', contador)
 
 st.markdown(''':green[El botón funciona todas las veces]''')
 
-st.write(
-        "
-        :red[El contador que sí funciona]
-
-        "
-    )
+st.write(" :red[El contador que sí funciona] ")
 
 if "counter" not in st.session_state:
     st.session_state.counter = 0
