@@ -26,7 +26,7 @@ st.markdown(''':green[El botón funciona todas las veces]''')
 
 st.write(
         """
-        ## 💯 El contador que sí funciona
+        ## :purple[💯 El contador que sí funciona]
 
         """
     )
