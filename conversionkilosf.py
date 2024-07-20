@@ -1,3 +1,6 @@
+#Referencia para código de contadores https://docs.streamlit.io/develop/concepts/architecture/session-state?ref=blog.streamlit.io
+#Ejemplos de session state como aplicaciones https://streamlit-release-demos-0-84streamlit-app-0-84-2ec1k9.streamlit.app/?page=headliner
+
 import streamlit as st
 
 def icon(emoji: str):
@@ -37,8 +40,14 @@ if st.session_state.counter <= 5:
     st.success("Sigue adelante con la cuenta 🎈")
 elif st.session_state.counter > 5:
     st.success("¡Ya alcanzaste la cuenta necesaria para el 🏆 " + str(st.session_state.counter))
-    
-st.button("Borrar 🧹", on_click= del st.session_state.counter)
+    st.balloons()
+
+def limpiar_cache():
+    keys = list(st.session_state.keys())
+    for key in keys:
+        st.session_state.pop(key)
+
+st.button("Borrar 🧹", on_click= limpiar_cache)
 
 st.markdown(''':blue[Ahora una prueba para enviar información fuera de un formulario]''')
 
