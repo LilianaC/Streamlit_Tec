@@ -37,3 +37,15 @@ if st.session_state.counter <= 5:
     st.success("Sigue adelante con la cuenta 🎈")
 elif st.session_state.counter > 5:
     st.success("¡Ya alcanzaste la cuenta necesaria para el 🏆 " + str(st.session_state.counter))
+
+st.markdown(''':blue[El botón funciona todas las veces]''')
+st.title('Counter Example using Callbacks')
+if 'count' not in st.session_state:
+    st.session_state.count = 0
+
+def increment_counter():
+    st.session_state.count += 1
+
+st.button('Increment', on_click=increment_counter)
+
+st.write('Count = ', st.session_state.count)
