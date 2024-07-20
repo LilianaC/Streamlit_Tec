@@ -1,5 +1,3 @@
-#Referencia para código de contadores https://docs.streamlit.io/develop/concepts/architecture/session-state?ref=blog.streamlit.io
-#Ejemplos de session state como aplicaciones https://streamlit-release-demos-0-84streamlit-app-0-84-2ec1k9.streamlit.app/?page=headliner
 
 import streamlit as st
 
