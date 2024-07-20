@@ -49,5 +49,5 @@ def limpiar_cache():
         del st.session_state[key]
 
 st.button("Borrar 🧹", on_click= limpiar_cache)
-#st.button("Borrar 🧹", on_click= del st.session_state.counter)
+
 
