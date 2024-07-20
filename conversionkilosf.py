@@ -30,16 +30,17 @@ st.write(
 
         """
     )
-    if "counter" not in st.session_state:
-        st.session_state.counter = 0
 
-    def increment():
-        st.session_state.counter += 1
+if "counter" not in st.session_state:
+    st.session_state.counter = 0
 
-    st.write("Counter:", st.session_state.counter)
-    st.button("Más uno ➕", on_click=increment)
+def increment():
+    st.session_state.counter += 1
 
-    if st.session_state.counter >= 5:
-        st.success("King of counting there! Your trophy for reaching 50: 🏆")
-    elif st.session_state.counter >= 7:
-        st.warning("You made it to 10! Keep going to win a prize 🎈")
+st.write("Counter:", st.session_state.counter)
+st.button("Más uno ➕", on_click=increment)
+
+if st.session_state.counter >= 5:
+    st.success("King of counting there! Your trophy for reaching 50: 🏆")
+elif st.session_state.counter >= 7:
+    st.warning("You made it to 10! Keep going to win a prize 🎈")
