@@ -36,4 +36,4 @@ st.button("Más uno ➕", on_click=increment)
 if st.session_state.counter <= 5:
     st.success("Sigue adelante con la cuenta 🎈")
 elif st.session_state.counter > 5:
-    st.success("¡Ya alcanzaste la cuenta necesaria para el 🏆 ", st.session_state.counter)
+    st.success("¡Ya alcanzaste la cuenta necesaria para el 🏆 " + str(st.session_state.counter))
