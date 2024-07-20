@@ -25,10 +25,10 @@ st.write('Contador = ', contador)
 st.markdown(''':green[El botón funciona todas las veces]''')
 
 st.write(
-        """
-        ## :purple[El contador que sí funciona]
+        "
+        :red[El contador que sí funciona]
 
-        """
+        "
     )
 
 if "counter" not in st.session_state:
