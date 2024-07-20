@@ -38,7 +38,9 @@ if st.session_state.counter <= 5:
 elif st.session_state.counter > 5:
     st.success("¡Ya alcanzaste la cuenta necesaria para el 🏆 " + str(st.session_state.counter))
 
-st.markdown(''':blue[Otra prueba]''')
+st.markdown(''':blue[Ahora una prueba para enviar información fuera de un formulario]''')
+
+st.button("Borrar 🧹", on_click=st.session_state.counter)
 
 import datetime
 
